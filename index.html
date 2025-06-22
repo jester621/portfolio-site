@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberSec Portfolio | Gayan Ariyadasa</title>
+  <title>CyberSec Portfolio | Sandaru Dinusha</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Sandaru Dinusha | Contact</h1>
-      <nav>
+    <div class="container nav-container">
+      <h1>Sandaru Dinusha | HOME PAGE</h1>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <nav id="nav">
         <a href="./index.html">Home</a>
         <a href="./projects.html">Projects</a>
         <a href="./knowledge.html">Knowledge</a>
@@ -28,63 +29,21 @@
     </div>
   </section>
 
-
-<section class="knowledge-grid container">
-  <h2>🧠 Tools & Knowledge</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="assets/tools/nmap.png" alt="Nmap" class="card-img" />
-      <h3>Nmap</h3>
-      <p>Network scanning and port mapping tool used in pentesting.</p>
+  <section class="knowledge-grid container">
+    <h2>🧠 Tools & Knowledge</h2>
+    <div class="grid">
+      <div class="card"><img src="assets/tools/nmap.png" alt="Nmap" class="card-img" /><h3>Nmap</h3><p>Network scanning and port mapping tool used in pentesting.</p></div>
+      <div class="card"><img src="assets/tools/burp-suite.png" alt="Burp Suite" class="card-img" /><h3>Burp Suite</h3><p>Intercept and scan HTTP traffic for web vulnerabilities.</p></div>
+      <div class="card"><img src="assets/tools/metasploit.png" alt="Metasploit" class="card-img" /><h3>Metasploit</h3><p>Framework for developing and executing exploit code.</p></div>
+      <div class="card"><img src="assets/tools/wireshark.png" alt="Wireshark" class="card-img" /><h3>Wireshark</h3><p>Packet analyzer used to inspect network traffic in detail.</p></div>
+      <div class="card"><img src="assets/tools/kali-linux.png" alt="Kali Linux" class="card-img" /><h3>Kali Linux</h3><p>OS preloaded with powerful offensive security tools.</p></div>
+      <div class="card"><img src="assets/tools/zap.png" alt="OWASP ZAP" class="card-img" /><h3>OWASP ZAP</h3><p>Automated web app scanner to find OWASP Top 10 risks.</p></div>
+      <div class="card"><img src="assets/tools/sonarqube.png" alt="SonarQube" class="card-img" /><h3>SonarQube</h3><p>Analyzes code quality and security flaws in your source.</p></div>
+      <div class="card"><img src="assets/tools/tryhackme.png" alt="TryHackMe" class="card-img" /><h3>TryHackMe</h3><p>Online platform to learn and practice real-world hacking skills.</p></div>
+      <div class="card"><img src="assets/tools/pfsense.png" alt="pfSense" class="card-img" /><h3>pfSense</h3><p>Firewall/router used in network perimeter defense.</p></div>
+      <div class="card"><img src="assets/tools/zeek.png" alt="Zeek" class="card-img" /><h3>Zeek</h3><p>Powerful network security monitoring tool for threat detection.</p></div>
     </div>
-    <div class="card">
-      <img src="assets/tools/burp-suite.png" alt="Burp Suite" class="card-img" />
-      <h3>Burp Suite</h3>
-      <p>Intercept and scan HTTP traffic for web vulnerabilities.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/metasploit.png" alt="Metasploit" class="card-img" />
-      <h3>Metasploit</h3>
-      <p>Framework for developing and executing exploit code.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/wireshark.png" alt="Wireshark" class="card-img" />
-      <h3>Wireshark</h3>
-      <p>Packet analyzer used to inspect network traffic in detail.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/kali-linux.png" alt="Kali Linux" class="card-img" />
-      <h3>Kali Linux</h3>
-      <p>OS preloaded with powerful offensive security tools.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/zap.png" alt="OWASP ZAP" class="card-img" />
-      <h3>OWASP ZAP</h3>
-      <p>Automated web app scanner to find OWASP Top 10 risks.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/sonarqube.png" alt="SonarQube" class="card-img" />
-      <h3>SonarQube</h3>
-      <p>Analyzes code quality and security flaws in your source.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/tryhackme.png" alt="TryHackMe" class="card-img" />
-      <h3>TryHackMe</h3>
-      <p>Online platform to learn and practice real-world hacking skills.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/pfsense.png" alt="pfSense" class="card-img" />
-      <h3>pfSense</h3>
-      <p>Firewall/router used in network perimeter defense.</p>
-    </div>
-    <div class="card">
-      <img src="assets/tools/zeek.png" alt="Zeek" class="card-img" />
-      <h3>Zeek</h3>
-      <p>Powerful network security monitoring tool for threat detection.</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <section class="attacks container">
     <h2>⚠️ Recent Cyber Attacks</h2>
@@ -105,31 +64,18 @@
   </section>
 
   <section class="attacks container">
-  <h2>⚠️ Recent Cyber Attacks in Sri Lanka</h2>
-  <ul>
-    <li>
-      <img src="./assests/government.jpg" alt="Alert" class="list-icon" />
-      <a href="attacks.html#ddos-attack"><strong>June 2025 - Sri Lanka Government Websites DDoS Attack</strong></a>: Multiple government portals experienced downtime due to a large-scale botnet-driven denial of service attack disrupting public services.
-    </li>
-    <li>
-      <img src="./assests/HNB_New_Logo.png" alt="Alert" class="list-icon" />
-      <a href="attacks.html#ransomware"><strong>April 2025 - Ransomware Targeting Local Banks</strong></a>: A sophisticated ransomware campaign encrypted critical bank servers demanding hefty ransom in cryptocurrency.
-    </li>
-    <li>
-      <img src="./assests/dialog.jpeg" alt="Alert" class="list-icon" />
-      <a href="attacks.html#data-leak"><strong>March 2025 - Data Leak at Sri Lankan Telecom Provider</strong></a>: Personal data of thousands of subscribers was exposed due to a misconfigured database.
-    </li>
-    <li>
-      <img src="./assests/boc.jpg" alt="Alert" class="list-icon" />
-      <a href="attacks.html#phishing"><strong>January 2025 - Phishing Campaign Impersonating Local Banks</strong></a>: Mass phishing emails targeted Sri Lankan citizens to steal login credentials and banking info.
-    </li>
-  </ul>
-</section>
-
+    <h2>⚠️ Recent Cyber Attacks in Sri Lanka</h2>
+    <ul>
+      <li><img src="./assests/government.jpg" alt="Alert" class="list-icon" /><a href="attacks.html#ddos-attack"><strong>June 2025 - Sri Lanka Government Websites DDoS Attack</strong></a>: Multiple government portals experienced downtime due to a large-scale botnet-driven denial of service attack disrupting public services.</li>
+      <li><img src="./assests/HNB_New_Logo.png" alt="Alert" class="list-icon" /><a href="attacks.html#ransomware"><strong>April 2025 - Ransomware Targeting Local Banks</strong></a>: A sophisticated ransomware campaign encrypted critical bank servers demanding hefty ransom in cryptocurrency.</li>
+      <li><img src="./assests/dialog.jpeg" alt="Alert" class="list-icon" /><a href="attacks.html#data-leak"><strong>March 2025 - Data Leak at Sri Lankan Telecom Provider</strong></a>: Personal data of thousands of subscribers was exposed due to a misconfigured database.</li>
+      <li><img src="./assests/boc.jpg" alt="Alert" class="list-icon" /><a href="attacks.html#phishing"><strong>January 2025 - Phishing Campaign Impersonating Local Banks</strong></a>: Mass phishing emails targeted Sri Lankan citizens to steal login credentials and banking info.</li>
+    </ul>
+  </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Gayan Ariyadasa | Stay Secure 🔐</p>
+      <p>&copy; 2025 Sandaru Dinusha | Stay Secure 🔐</p>
     </div>
   </footer>
 
