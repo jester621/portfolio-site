@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg: #0a0f14;
+  --fg: #cbd5e1;
+  --accent: #00ff88;
+  --header-bg: #121c24;
+  --card-bg: #16202a;
+  --border-color: #00ff88;
+  --shadow-color: rgba(0, 255, 136, 0.3);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: var(--fg);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.attacks-detail {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.attack-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.attack-card:hover {
+  border-color: var(--accent);
+}
+
+.attack-card h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
+
+.attack-card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: var(--fg);
+}
+
+.attack-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+footer {
+  background-color: var(--header-bg);
+  padding: 20px 0;
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: var(--fg);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .attack-card {
+    padding: 15px;
+  }
+  .attack-card h2 {
+    font-size: 1.3rem;
+  }
+  .attack-card p {
+    font-size: 0.95rem;
+  }
+}
